@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Aluno</title>
+</head>
+<body>
+    <h1>
+        Cadastro de Aluno
+    </h1>
+    <form id="cadastro-aluno">
+        <label for="Matricula">Matricula:</label>
+        <input type="text" id="Matricula" name="Matricula" required><br><br>
+        <label for="Nome">Nome:</label>
+        <input type="text" id="Nome" name="Nome" required><br><br>        
+        <label for="Data-nascimento">Data de Nascimento:</label>
+        <input type="text" id="Data-nascimento" name="Data-nascimento" required><br><br>        
+        <label for="Curso">Curso:</label>
+        <input type="text" id="Curso" name="Curso" required><br><br>
+        <label>Sexo:</label><br>
+        <input type="radio" id="masculino" name="Sexo" value="maculino" required>
+        <label for="maculino">Maculino</label><br>
+        <input type="radio" id="Feminino" name="sexo" value="feminino" required>
+        <label for="Feminino">Feminino</label><br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <script>
+        document.getElementById('cadastro-aluno').onsomit=function(event){
+            event.preventDefault();
+            const Matricula=document.getElementbyid('matricula') value; 
+            const Nome=document.getElementbyid('Nome') value;            
+            const Datanascimento=document.getElementbyid('Data-nascimento') value;            
+            const Curso=document.getElementbyid('Curso') value; 
+            const sexo=documents.getElementById('input[name="sexo"]:checked') value;
+
+            console.log({matricula, nome,dataNascimento, curso, sexo});
+            alert('Aluno cadastrado com sucesso');
+        }
+    </script>
+</body>
+</html>
